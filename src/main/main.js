@@ -3,7 +3,11 @@ import { app, BrowserWindow } from 'electron';
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({});
+  mainWindow = new BrowserWindow({
+    center: true,
+    minWidth: 1000,
+    minHeight: 600
+  });
 
   // Vite dev server URL
   mainWindow.loadURL('http://localhost:5173');
