@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route } from "react-router-dom"
 
 import Navigation from './components/navigation/index';
 
+import Base64Converter from './features/base64';
 import RandomStringGenerator from './features/random_string_generator';
 
 import './App.css'
@@ -47,8 +48,7 @@ function App() {
                   {/* <Route path="/" exact element={<div>Path 1</div>} /> */}
                   <Route default path="/" exact element={<RandomStringGenerator />} />
                   <Route default path="/randomstringgenerator" exact element={<RandomStringGenerator />} />
-                  <Route path="/test" exact element={<div>Path 2</div>} />
-                  <Route path="/test2" exact element={<div>Path 3</div>} />
+                  <Route path="/base64" exact element={<Base64Converter />} />
                 </Routes>
               </Content>
             </Layout>

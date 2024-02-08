@@ -1,7 +1,11 @@
 import { app, BrowserWindow } from "electron";
 let mainWindow;
 function createWindow() {
-  mainWindow = new BrowserWindow({});
+  mainWindow = new BrowserWindow({
+    center: true,
+    minWidth: 1e3,
+    minHeight: 600
+  });
   mainWindow.loadURL("http://localhost:5173");
   mainWindow.on("closed", () => mainWindow = null);
 }
