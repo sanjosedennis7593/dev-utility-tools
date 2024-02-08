@@ -14,11 +14,11 @@ function getItem(label, key, icon, children, type) {
 
 const items = [
     getItem('Random String Generator', 'randomstringgenerator'),
-    getItem('Date Converter', '/dateconverter'),
-    getItem('RegExp Tester', 'regexp'), 
-    getItem('JSON Formatter', '/json'),
-    getItem('SQL Formatter', '/sql'),
     getItem('Base64 Encode/Decode', 'base64'),
+    getItem('Date Converter', 'dateconverter'),
+    getItem('RegExp Tester', 'regexp'), 
+    getItem('JSON Formatter', 'json'),
+    getItem('SQL Formatter', 'sql')
 ];
 
 
@@ -33,7 +33,7 @@ const Navigation = () => {
     return (
         <Menu
             style={{
-                height: '99vh',
+                height: '100%',
                 fontSize: 12
             }}
             onClick={onClick}
