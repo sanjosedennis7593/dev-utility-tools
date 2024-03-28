@@ -13,15 +13,19 @@ const __customFileName = fileURLToPath(import.meta.url);
 const __customDirName = path.dirname(__customFileName);
 
 function createWindow() {
+
   mainWindow = new BrowserWindow({
     center: true,
-    minWidth: 1000,
-    minHeight: 600,
+    minWidth: 1300,
+    minHeight: 700,
+    // resizable: false,
     webPreferences: {
+      enableRemoteModule: true,
       preload: join(__customDirName, '../preload/preload.cjs'),
       sandbox: false
     }
-  });
+  })
+
 
   if(devMode) {
     mainWindow.loadURL('http://localhost:5173');
@@ -29,7 +33,7 @@ function createWindow() {
   else {
     mainWindow.loadFile(path.join(__customDirName, `../renderer/index.html`));
   }
- 
+
   mainWindow.on('closed', () => mainWindow = null);
 }
 
