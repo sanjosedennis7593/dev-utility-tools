@@ -1,6 +1,6 @@
 import React from 'react'
 import { Menu } from 'antd';
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function getItem(label, key, icon, children, type) {
     return {
@@ -15,9 +15,9 @@ function getItem(label, key, icon, children, type) {
 const items = [
     getItem('Random String Generator', 'randomstringgenerator'),
     getItem('Base64 Encode/Decode', 'base64'),
+    getItem('JSON Formatter', 'json'),
     getItem('Date Converter', 'dateconverter'),
     getItem('RegExp Tester', 'regexp'), 
-    getItem('JSON Formatter', 'json'),
     getItem('SQL Formatter', 'sql')
 ];
 

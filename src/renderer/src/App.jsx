@@ -5,6 +5,7 @@ import { HashRouter, Routes, Route } from "react-router-dom"
 import Navigation from './components/navigation/index';
 
 import Base64Converter from './features/base64';
+import JSON from './features/json';
 import RandomStringGenerator from './features/random_string_generator';
 
 import './App.css'
@@ -47,6 +48,7 @@ function App() {
                 <Routes>
                   {/* <Route path="/" exact element={<div>Path 1</div>} /> */}
                   <Route default path="/" exact element={<RandomStringGenerator />} />
+                  <Route default path="/json" exact element={<JSON />} />
                   <Route default path="/randomstringgenerator" exact element={<RandomStringGenerator />} />
                   <Route path="/base64" exact element={<Base64Converter />} />
                 </Routes>
